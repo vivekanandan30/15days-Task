@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Scripts/style.css">
+	  <script src="scripts/jquery-3.1.1.min.js"></script>
+	  <script src="bootstrap/js/bootstrap.min.js"></script>	  
+  </head>
+  <body>
+	  <div id="band" class="container text-center">
+		  <h3 id="temple_Name">Temple Name</h3>
+		  <p id="Location"><em>Location</em></p>
+			  <div id="heroImage" align="center">
+			  </div>
+		  <br><br>
+		  <p class="text-justify" id="description"></p>
+		  <br>
+		    <h3 class="text-center">Location Details</h3><br>
+			  <ul class="nav nav-tabs">
+			    <li class="active"><a data-toggle="tab" href="#home">Bus Stop</a></li>
+			    <li><a data-toggle="tab" href="#menu1">Railway Station</a></li>
+			    <li><a data-toggle="tab" href="#menu2">Airport</a></li>
+			  </ul>
+			  <br>
+			  <div class="tab-content">
+			    <div id="home" class="tab-pane fade in active">
+			      <h2>Nearest Bus Stop</h2>
+			      <p id="busStop"></p>
+			    </div>
+			    <div id="menu1" class="tab-pane fade">
+			      <h2>Nearest Railway Station</h2>
+			      <p id="railwaystat"></p>
+			    </div>
+			    <div id="menu2" class="tab-pane fade">
+			      <h2>Nearest Airport</h2>
+			      <p id="airport"></p>
+			    </div>
+			  </div>
+			</div>
+		</div>
+		<footer class="text-center">
+		  <a class="up-arrow" href="#" data-toggle="tooltip" title="TO TOP">
+		    <span class="glyphicon glyphicon-chevron-up"></span>
+		  </a><br><br>
+		  <ul class="list-inline social-icon">
+			<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+			<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+			<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+			<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+			<li><a href="#"><i class="fa fa-flickr"></i></a></li>
+		</ul>
+		<br>
+		  	<p>Tamilnadu Temple Details</p>
+	  		<p>Copyright © 2016. All Rights Reserved.</p>
+		</footer>
+	
+	 <script>
+		function DetailPage(){
+			var b = sessionStorage.getItem("sent");
+			//alert(b);
+				var heading = document.getElementById("temple_Name");
+				var subheading = document.getElementById("Location");
+				var Heroimage = document.getElementById("heroImage");
+				var Description = document.getElementById("description");
+				var BusStop = document.getElementById("busStop");
+				var RailwayStat = document.getElementById("railwaystat");
+				var Airport = document.getElementById("airport");
+			$.ajax('http://localhost:3000/tempdetails/' + b, {
+			  method: 'GET'
+				}).then(function(data) {
+				mydata = data;
+				
+					heading.innerHTML = mydata.templeName;
+					subheading.innerHTML = mydata.location;
+					Heroimage.innerHTML = "<img class='img-responsive' src="+
+					 mydata.MainImagepath +" alt='Random Name'>";
+					Description.innerHTML = mydata.description;
+					BusStop.innerHTML = mydata.nearestBusStop;
+					RailwayStat.innerHTML = mydata.nearestRailwayStation;
+					Airport.innerHTML = mydata.nearestAirport;
+
+				console.log(mydata);
+			});
+		}
+		window.onload=DetailPage;
+	</script>
+  </body>
+  </html>

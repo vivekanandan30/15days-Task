@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Scripts/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	  <script src="scripts/jquery-3.1.1.min.js"></script>
+	  <script src="bootstrap/js/bootstrap.min.js"></script>
+	  <script src="myjs.js"></script>
+  </head>
+  <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+		        <span class="icon-bar"></span>	
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="#myPage">Logo</a>
+		    </div>
+		    <div class="collapse navbar-collapse" id="myNavbar">
+		      <ul class="nav navbar-nav navbar-left">
+		        <li><a class="page-scroll" href="#myPage"><i class="fa fa-home fa-lg"></i> HOME</a></li>
+		        <li><a class="page-scroll" href="#templedetails"><i class="fa fa-road fa-lg"></i> TEMPLES</a></li>
+		        <li><a class="page-scroll" href="#aboutus"><i class="fa fa-user fa-lg"></i> ABOUT US</a></li>
+		        <li><a class="page-scroll" href="#team"><i class="fa fa-users fa-lg"></i> TEAM</a></li>
+		        <li><a class="page-scroll" href="#contact"><i class="fa fa-phone fa-lg"></i> CONTACT US</a></li>
+		      </ul>
+		    </div>
+		    <div class="nav navbar-nav navbar-right">
+		    	<!-- Side Navigation -->
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+           
+            <li>
+                <a href="#myPage" onclick=$("#menu-close").click();><i class="fa fa-home fa-lg"></i> HOME</a>
+            </li>
+            <li>
+                <a href="#templedetails" onclick=$("#menu-close").click();><i class="fa fa-road fa-lg"></i> TEMPLES</a>
+            </li>
+            <li>
+                <a href="#aboutus" onclick=$("#menu-close").click();><i class="fa fa-user fa-lg"></i> ABOUT US</a>
+            </li>
+            <li>
+                <a href="#team" onclick=$("#menu-close").click();><i class="fa fa-users fa-lg"></i> TEAM</a>
+            </li>
+            <li>
+                <a href="#contact" onclick=$("#menu-close").click();><i class="fa fa-phone fa-lg"></i> CONTACT US</a>
+            </li>
+            <li>
+                <a href="create.html" target="_blank" onclick=$("#menu-close").click();><i class="fa fa-cogs fa-lg"></i> ADMIN</a>
+            </li>
+        </ul>
+    </nav>
+		    </div>
+		  </div>
+		</nav>
+
+	
+
+	<!-- Slider start -->
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	    <!-- Indicators -->
+	    <ol class="carousel-indicators">
+	      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+	      <li data-target="#myCarousel" data-slide-to="1"></li>
+	      <li data-target="#myCarousel" data-slide-to="2"></li>
+	      <li data-target="#myCarousel" data-slide-to="3"></li>
+	      <li data-target="#myCarousel" data-slide-to="4"></li>
+	    </ol>
+
+	    <!-- Wrapper for slides -->
+	    <div class="carousel-inner" role="listbox">
+	      <div class="item active">
+	        <img src="images/slider/bg1.jpg" alt="kanyakumari">
+	        <div class="carousel-caption">
+	          <h1 class="animated2">kanyakumari</h1>
+	          <h6 class="animated3">Kanyakumari is especially popular in India for its spectacular and unique sunrise and sunset.</h6>
+	        </div>
+	      </div>
+
+	      <div class="item">
+	        <img src="images/slider/bg2.jpg" alt="Brihadeswara temple">
+	        <div class="carousel-caption">
+	          <h1 class="animated4">the Brihadeswara temple</h1>
+	          <h6 class="animated5">The "moolavar" or prime deity of the Brihadeeswarar Temple is Shiva.</h6>
+	        </div>
+	      </div>
+	    
+	      <div class="item">
+	        <img src="images/slider/bg3.jpg" alt="Tirupati">
+	        <div class="carousel-caption">
+	          <h1 class="animated6">Tirumala Tirupati Balaji Temple</h1>
+	          <h6 class="animated7">The Temple is dedicated to Lord Venkateswara, an incarnation of Vishnu.</h6>
+	        </div>
+	      </div>
+	      <div class="item">
+	        <img src="images/slider/bg4.jpg" alt="thiruvanaikaval">
+	        <div class="carousel-caption">
+	          <h1 class="animated8">thiruvanaikaval temple in trichy</h1>
+	          <h6 class="animated2">Thiruvanaikal is one of the five major Shiva Temples of Tamil Nadu.</h6>
+	        </div>
+	      </div>
+	      <div class="item">
+	        <img src="images/slider/bg5.jpg" alt="Golden Temple">
+	        <div class="carousel-caption">
+	          <h1 class="animated5">Golden Temple, Sripuram</h1>
+	          <h6 class="animated4">The salient feature of 'Sripuram' is the Lakshmi Narayani temple whose 'Vimanam’ and<br> ‘Ardha Mandapam’ is covered with pure gold.</h6>
+	        </div>
+	      </div>
+	    </div>
+
+	    <!-- Left and right controls -->
+	    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+	      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+	      <span class="sr-only">Previous</span>
+	    </a>
+	    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+	      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+	      <span class="sr-only">Next</span>
+	    </a>
+	</div>
+  <!--/ Slider end -->
+		<!-- Container (The Band Section) -->
+	<div id="templedetails">
+	<br><br>
+	<h3><center>TEMPLE DETAILS</center></h3><br>
+		<div class="col-md-8">
+		</div>
+		<div class="col-md-4 form-group text-left input-group">
+		<input type="text" class="form-control" id="searchId" onkeyup="mySearch();" placeholder="Search...">
+		</div>
+		<table align='center' id="mytable">
+		</table>
+	</div>
+	<script>
+	function mySearch(){
+		var searchTxt = document.getElementById('searchId').value;
+		templeDetails.filterDetails(searchTxt);
+		
+	}
+	</script
+
+	<!-- Start About us -->
+    <section class="about" id="aboutus">
+    	<div class="container">
+    		<div>
+		  		<div class="col-md-12">
+		  			<div class='text-center heading'>
+			    		<h2 class="title">About Us</h2><br>
+			    		<h3 class="subtitle">We Love to Work with Passion</h3><br><br>
+			    	</div>
+		  		</div>
+		  </div><!--/ Title row end -->
+
+		  <div class="row">
+				<div class="col-md-6 wow slideInLeft">
+				<!-- Slider start -->
+				<div id="myCarousel2" class="carousel slide" data-ride="carousel">
+				    <!-- Indicators -->
+				    <ol class="carousel-indicators">
+				      <li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
+				      <li data-target="#myCarousel2" data-slide-to="1"></li>
+				      <li data-target="#myCarousel2" data-slide-to="2"></li>
+				    </ol>
+
+				    <!-- Wrapper for slides -->
+				    <div class="carousel-inner" role="listbox">
+				      <div class="item active">
+				        <img src="images/smallslider1.jpg" alt="kanyakumari">
+				        <div class="carousel-caption">
+				        </div>
+				      </div>
+
+				      <div class="item">
+				        <img src="images/smallslider2.jpg" alt="Brihadeswara temple">
+				        <div class="carousel-caption">
+				        </div>
+				      </div>
+				    
+				      <div class="item">
+				        <img src="images/smallslider3.jpg" alt="Tirupati">
+				        <div class="carousel-caption">
+				        </div>
+				      </div>
+				    </div>
+
+				    <!-- Left and right controls -->
+				    <a class="left carousel-control" href="#myCarousel2" role="button" data-slide="prev">
+				      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				      <span class="sr-only">Previous</span>
+				    </a>
+				    <a class="right carousel-control" href="#myCarousel2" role="button" data-slide="next">
+				      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				      <span class="sr-only">Next</span>
+				    </a>
+				</div>
+			  <!--/ Slider end -->
+			</div>
+				<div class="col-md-6 wow slideInRight">
+					<h3 class="page-content-title">Who We Are</h3>
+					<p>We are gathering collection of discourses on our most valued epics, hindu temple details for the very people like us. Today in this busy internet world, we hardly have time to sit down and read books to learn from them. Even if we get that time, it is difficult for us to get to the depth of the subject by reading alone. Also a learned Guru can link all the related scriptures and our practical daily life together to strengthen the subject line, which is impossible for ordinary mortals like us by reading the books.</p>
+					<p>The great saints and poets like Veda Vyas, Valmiki, Pothana who rendered the ancient Sanskrit texts wanted all of us to learn and benefit from the same. Also when our very own senior Gurus have spoken in public meeting places and elucidated these scriptures, we are sure their intention was to make the true meaning of these scriptures to reach common man for the benefit of our society. We are sure that this continues to be the goal of any Pravaktha propagating our Hindu Dharma.</p>
+					<div class="gap-20"></div>
+				</div>
+			</div><!--/ about intro row end -->
+		</div>
+	</section>
+	
+
+	<!-- Team Section -->
+    <section id="team">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="title">Our Amazing Team</h2>
+                    <h3 class="subtitle">We provide free tamilnadu temple details for you.</h3>
+                </div>
+            </div><br>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <center><img src="images/Srihari.jpg" class="img-responsive img-circle" alt="">
+                        <h4 class="text-center">Sri Hari</h4>
+                        <h5 class="text-center">CEO</h5	>
+                        <ul class="list-inline social-icon">
+                            <li><a href="#"><i class="fa fa-twitter img-circle"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-facebook img-circle"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-linkedin img-circle"></i></a>
+                            </li>
+                        </ul></center>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <center><img src="images/Vivek.jpg" class="img-responsive img-circle" alt="">
+                        <h4 class="text-center">Vivek</h4>
+                        <h5 class="text-center">Developer</h5>
+                        <ul class="list-inline social-icon">
+                            <li><a href="#"><i class="fa fa-twitter img-circle"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-facebook img-circle"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-linkedin img-circle"></i></a>
+                            </li>
+                        </ul></center>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member">
+                       <center> <img src="images/Mahathi.jpg" class="img-responsive img-circle" alt="">
+                        <h4 class="text-center">Mahathi</h4>
+                        <h5 class="text-center">Future Developer</h5>
+                        <ul class="list-inline social-icon">
+                            <li><a href="#"><i class="fa fa-twitter img-circle"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-facebook img-circle"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-linkedin img-circle"></i></a>
+                            </li></center>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+	<!-- Contact Form start -->
+	<section id="contact" class="">
+		<div class="container">
+			<div class="row">
+		    	<div class="col-md-12">
+		  			<div class='text-center'>
+			    		<div class='text-center heading'>
+				    		<h2 class="title">Contact Us</h2>
+				    	</div>
+			    	</div>
+		  		</div>
+	    	</div>
+	    	<div class="row">
+				<form id="contact-form" action="" method="post" role="form">
+					<div class="row">
+						<div class="col-md-4">
+							<div class="form-group">
+								<label>Name</label>
+							<input class="form-control" name="name" id="name" placeholder="" type="text" required>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="form-group">
+								<label>Email</label>
+								<input class="form-control" name="email" id="email" 
+								placeholder="" type="email" required>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="form-group">
+								<label>Subject</label>
+								<input class="form-control" name="subject" id="subject" 
+								placeholder="" required>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label>Message</label>
+						<textarea class="form-control" name="message" id="message" placeholder="" rows="10" required></textarea>
+					</div>
+					<div class="text-right"><br>
+						<button class="btn btn-primary" type="submit">Send Message</button> 
+					</div>
+				</form>
+	    	</div>
+		</div>
+	</section><!--/ Contact Form end -->
+	<!-- Footer -->
+	<footer class="text-center">
+	  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+	    <span class="glyphicon glyphicon-chevron-up"></span>
+	  </a><br><br>
+	  	<ul class="list-inline social-icon">
+			<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+			<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+			<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+			<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+			<li><a href="#"><i class="fa fa-flickr"></i></a></li>
+		</ul>
+
+	  <br>
+	  <p>Tamilnadu Temple Details</p>
+	  <p>Copyright © 2016. All Rights Reserved.</p>
+	</footer>
+<script>
+	function mytempDetails(){
+		templeDetails.getTempleDetails();
+		
+	}
+	window.onload = mytempDetails;
+</script>
+ <!-- Custom Theme JavaScript -->
+    <script>
+    // Closes the sidebar menu
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+    // Scrolls to the selected menu item on the page
+    $(function() {
+        $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+    //#to-top button appears after scrolling
+    var fixed = false;
+    $(document).scroll(function() {
+        if ($(this).scrollTop() > 250) {
+            if (!fixed) {
+                fixed = true;
+                // $('#to-top').css({position:'fixed', display:'block'});
+                $('#to-top').show("slow", function() {
+                    $('#to-top').css({
+                        position: 'fixed',
+                        display: 'block'
+                    });
+                });
+            }
+        } else {
+            if (fixed) {
+                fixed = false;
+                $('#to-top').hide("slow", function() {
+                    $('#to-top').css({
+                        display: 'none'
+                    });
+                });
+            }
+        }
+    });
+    </script
+</body>
+</html>

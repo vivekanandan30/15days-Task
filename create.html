@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Scripts/style.css">
+	  <script src="scripts/jquery-3.1.1.min.js"></script>
+	  <script src="bootstrap/js/bootstrap.min.js"></script>
+	  <script src="external.js"></script>	  
+  </head>
+  <body>
+
+	  <div id="band" class="container text-center">
+		  <h2 id="temple_Name">Temple Details</h2>
+
+			  <ul class="nav nav-tabs">
+			    <li class="active"><a data-toggle="tab" href="#create">Create</a></li>
+			    <li><a data-toggle="tab" href="#edit">Edit</a></li>
+			    <li><a data-toggle="tab" href="#delete">Delete</a></li>
+			  </ul>
+			  <br>
+			  <div class="tab-content">
+			    <div id="create" class="tab-pane fade in active">
+			    <br>
+			      <h3>Add New Temple Details</h3><br>
+			      <form id="contact-form" action="" method="post" role="form">
+					<div class="form-group text-left">
+						<label>Temple Name:</label>
+						<input class="form-control" name="name" id="Name" placeholder="" type="text" required>
+					</div>
+					<div class="form-group text-left">
+						<label>Location:</label>
+						<input class="form-control" name="email" id="Loc" 
+						placeholder="" type="text" required>
+					</div>
+					
+					<div class="form-group text-left">
+						<label>Nearest Bus Stop:</label>
+						<input class="form-control" name="subject" id="busStop" placeholder="" type="text" required>
+					</div>
+					<div class="form-group text-left">
+						<label>Nearest Railway Station:</label>
+						<input class="form-control" name="subject" id="railway" placeholder="" type="text" required>
+					</div>
+					<div class="form-group text-left">
+						<label>Nearest Airport:</label>
+						<input class="form-control" name="subject" id="airport"placeholder="" type="text" required>
+					</div>
+					<div class="form-group text-left">
+						<label>Thumbnail Path:</label>
+						<input class="form-control" name="subject" id="thumPath" value="images/" type="text" required>
+					</div>
+					<div class="form-group text-left">
+						<label>Main Image Path:</label>
+						<input class="form-control" name="subject" id="MainPath" value="images/" type="text" required>
+					</div>
+					<div class="form-group text-left">
+						<label>Temple Description:</label>
+						<textarea class="form-control" name="message" id="Decp" placeholder="" rows="5" type="text" required></textarea>
+					</div>
+					<div class="text-right"><br>
+						<button class="btn btn-primary" onclick="myclear()">CLEAR</button>
+						<button class="btn btn-primary" type="submit" onclick="createNew()">ADD</button> 
+					</div>
+				</form>	
+			    </div>
+			    <div id="edit" class="tab-pane fade">
+				    <br>
+					<h3>Modify Your Existing Temple Details</h3><br>
+				      <form id="contact-form" method="post" role="form">
+						<div class="form-group text-left input-group">
+					        <label>Temple ID:</label>
+					        <input type="number" class="form-control" id="tempID" placeholder="Search...">
+					        <span class="input-group-btn">
+					          <button class="btn btn-default" type="button" onclick="searching()" style="margin-top:31.4px; height:35.2px;">
+					            <span class="glyphicon glyphicon-search"></span>
+					          </button>
+					        </span>
+					      </div>
+						<div class="form-group text-left">
+							<label>Temple Name:</label>
+							<input class="form-control" name="name" id="mod_Name" placeholder="" type="text" required>
+						</div>
+						<div class="form-group text-left">
+							<label>Location:</label>
+							<input class="form-control" name="email" id="mod_Loc" 
+							placeholder="" type="text" required>
+						</div>
+						
+						<div class="form-group text-left">
+							<label>Nearest Bus Stop:</label>
+							<input class="form-control" name="subject" id="mod_busStop" placeholder="" type="text" required>
+						</div>
+						<div class="form-group text-left">
+							<label>Nearest Railway Station:</label>
+							<input class="form-control" name="subject" id="mod_railway" placeholder="" type="text" required>
+						</div>
+						<div class="form-group text-left">
+							<label>Nearest Airport:</label>
+							<input class="form-control" name="subject" id="mod_airport"placeholder="" type="text" required>
+						</div>
+						<div class="form-group text-left">
+							<label>Thumbnail Path:</label>
+							<input class="form-control" name="subject" id="mod_thumPath" value="images/" type="text" required>
+						</div>
+						<div class="form-group text-left">
+							<label>Main Image Path:</label>
+							<input class="form-control" name="subject" id="mod_MainPath" value="images/" type="text" required>
+						</div>
+						<div class="form-group text-left">
+							<label>Temple Description:</label>
+							<textarea class="form-control" name="message" id="mod_Decp" placeholder="" rows="5" type="text" required></textarea>
+						</div>
+						<div class="text-right"><br>
+							<button class="btn btn-primary" onclick="myclear()">CLEAR</button>
+							<button class="btn btn-primary" type="submit" onclick="updateNew()">UPDATE</button> 
+						</div>
+					</form>				    
+				</div>
+			    <div id="delete" class="tab-pane fade">
+			      <h3>Delete your existing temple details</h3>
+			      <br>
+			      	<table align='center' id="mytable2" style="width:100%">
+					</table>
+			    </div>
+			  </div>
+			</div>
+		</div>
+		<footer class="text-center">
+		  <a class="up-arrow" href="#" data-toggle="tooltip" title="TO TOP">
+		    <span class="glyphicon glyphicon-chevron-up"></span>
+		  </a><br><br>
+		  <ul class="list-inline social-icon">
+			<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+			<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+			<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+			<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+			<li><a href="#"><i class="fa fa-flickr"></i></a></li>
+		</ul>
+		<br>
+		  	<p>Tamilnadu Temple Details</p>
+	  		<p>Copyright © 2016. All Rights Reserved.</p>
+		</footer>	
+		<script>
+		window.onload = deleteSearch;
+		</script 
+  </body>
+  </html>
